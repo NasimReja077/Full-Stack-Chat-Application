@@ -6,6 +6,8 @@ import SignUpPage from './Pages/Authentication page/SignUpPage';
 import ForgotPasswordPage from './Pages/Authentication page/ForgotPasswordPage';
 import Loader from './components/Loder/Loader';
 import Error from './Pages/Error Pages/Error';
+import OTPVerification from './Pages/Authentication page/OTPVerification';
+import Profile from './Pages/Profile page/Profile';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
         <Route path="/loader" element={<Loader />} />
         <Route path="/error" element={<Error />} />
+        <Route path="/otp" element={<OTPVerification />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   )
