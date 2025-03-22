@@ -8,6 +8,7 @@ import Loader from './components/Loder/Loader';
 import Error from './Pages/Error Pages/Error';
 import OTPVerification from './Pages/Authentication page/OTPVerification';
 import Profile from './Pages/Profile page/Profile';
+import Chat from './Pages/Home/Chat Page/Chat';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/error" element={<Error />} />
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/chats" element={<Chat />} />
       </Routes>
     </Router>
   )
