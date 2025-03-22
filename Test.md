@@ -31,7 +31,10 @@
 
 
 Ai tool - https://v0.dev/
-Color Library - https://ui.shadcn.com/colors
+Color Library - https://www.realtimecolors.com/?colors=d0f2fb-031b21-78d3f2-99590f-66e920&fonts=Inter-Inter (best)
+desing - https://spline.design/
+stock - https://stacksorted.com/buttons
+https://ui.shadcn.com/colors
 best Components - https://ui.aceternity.com/ 
 https://www.hyperui.dev/ < best
 https://daisyui.com/components/chat/ < best
