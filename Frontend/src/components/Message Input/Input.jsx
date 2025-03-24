@@ -73,7 +73,7 @@ function Input() {
           className="flex-1 bg-transparent border-none focus:outline-none text-white placeholder-gray-400"
         />
 
-        <button className="p-2 bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-110 rounded-full transition-transform">
+        <button className="p-2 bg-gradient-to-r from-blue-500 to-cyan-400 cursor-pointer hover:scale-110 rounded-full transition-transform">
           <BsSendFill className="w-6 h-6 text-white" />
         </button>
       </div>

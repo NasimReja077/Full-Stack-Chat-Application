@@ -27,11 +27,15 @@
 2. npm install react-icons
 3. npm install framer-motion
 4. npm install react-tsparticles tsparticles
+5. npm install emoji-picker-react
 ------------------------------------------
 
 
 Ai tool - https://v0.dev/
+     https://bolt.new/ 
+     https://chatgpt.com/
 Color Library - https://www.realtimecolors.com/?colors=d0f2fb-031b21-78d3f2-99590f-66e920&fonts=Inter-Inter (best)
+https://react-icons.github.io/react-icons/
 desing - https://spline.design/
 stock - https://stacksorted.com/buttons
 https://ui.shadcn.com/colors
