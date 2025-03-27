@@ -5,58 +5,109 @@ import { PiDownloadSimpleBold } from "react-icons/pi";
 import { FaCheck } from "react-icons/fa6";
 import { LuCheckCheck } from "react-icons/lu";
 import { TiMessages } from "react-icons/ti";
+
 const messages = [
+  {
+       id: 1,
+       text: "Hey Sarah! How's the new project coming along? 👋",
+       time: "10:30 AM",
+       sender: "user",
+       status: "seen",
+       type: "text"
+     },
      {
-          id: 1,
-          text: "Hey Sarah! How's the new project coming along? 👋",
-          time: "10:30 AM",
-          sender: "user",
-          status: "seen",
-          type: "text"
-        },
-        {
-          id: 2,
-          text: "Hi! It's going great! We just finished the initial design phase 🎨",
-          time: "10:32 AM",
-          sender: "other",
-          status: "seen",
-          type: "text"
-        },
-        {
-          id: 3,
-          type: "image",
-          content: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-          caption: "Here's a preview of the dashboard design",
-          time: "10:33 AM",
-          sender: "other",
-          status: "seen"
-        },
-        {
-          id: 4,
-          type: "file",
-          content: "Project_Presentation.pdf",
-          fileSize: "2.4 MB",
-          time: "10:34 AM",
-          sender: "other",
-          status: "seen"
-        },
-        {
-          id: 5,
-          text: "These look amazing! The color scheme is perfect 🎨",
-          time: "10:35 AM",
-          sender: "user",
-          status: "delivered",
-          type: "text"
-        },
-        {
-          id: 6,
-          text: "Thanks! I'll send more updates as we progress 📊",
-          time: "10:36 AM",
-          sender: "other",
-          status: "sent",
-          type: "text"
-        }
+       id: 2,
+       text: "Hi! It's going great! We just finished the initial design phase 🎨",
+       time: "10:32 AM",
+       sender: "other",
+       status: "seen",
+       type: "text"
+     },
+     {
+       id: 3,
+       type: "image",
+       content: "https://images.unsplash.com/photo-1618788372246-79faff0c3742?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+       caption: "Here's a preview of the dashboard design",
+       time: "10:33 AM",
+       sender: "other",
+       status: "seen"
+     },
+     {
+       id: 4,
+       type: "file",
+       content: "Project_Presentation.pdf",
+       fileSize: "2.4 MB",
+       time: "10:34 AM",
+       sender: "other",
+       status: "seen"
+     },
+     {
+       id: 5,
+       text: "These look amazing! The color scheme is perfect 🎨",
+       time: "10:35 AM",
+       sender: "user",
+       status: "delivered",
+       type: "text"
+     },
+     {
+       id: 6,
+       text: "Thanks! I'll send more updates as we progress 📊",
+       time: "10:36 AM",
+       sender: "other",
+       status: "sent",
+       type: "text"
+     },
+     { 
+       id: 7, 
+       type: "video", 
+       content: "https://www.w3schools.com/html/mov_bbb.mp4", 
+       time: "10:38 AM", 
+       sender: "other", 
+       status: "seen" 
+     },
+     { 
+       id: 8, 
+       text: "Check out this prototype! Let me know what you think 🎬", 
+       time: "10:39 AM", 
+       sender: "other", 
+       status: "seen", 
+       type: "text" 
+     },
+     { 
+       id: 9, 
+       text: "Did you get a chance to review the document? 📄", 
+       time: "10:40 AM", 
+       sender: "user", 
+       status: "delivered", 
+       type: "text" 
+     },
+     { 
+       id: 10, 
+       text: "Yes, I did! It looks well-structured.", 
+       time: "10:41 AM", 
+       sender: "other", 
+       status: "seen", 
+       type: "text" 
+     },
+     { 
+       id: 11, 
+       type: "image", 
+       content: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80", 
+       caption: "Take a look at this UI design update", 
+       time: "10:42 AM", 
+       sender: "other", 
+       status: "seen" 
+     },
+     { 
+       id: 12, 
+       text: "Looks impressive! The layout is clean and minimalistic.✨", 
+       time: "10:43 AM", 
+       sender: "user", 
+       status: "delivered", 
+       type: "text" 
+     }
 ];
+
 function ChatBubble() {
      const [attachment, setAttachment] = useState('none');
 
@@ -72,7 +123,7 @@ function ChatBubble() {
                               className="rounded-lg max-w-sm cursor-pointer hover:opacity-95 transition-opacity shadow-lg"/>{message.caption && (
                               <p className="text-sm mt-1 text-gray-300">{message.caption}</p>
                               )}
-                              <button className="absolute top-2 right-2 p-2 bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70">
+                              <button className="absolute top-2 right-2 p-2 cursor-pointer bg-black/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-black/70">
                               <IoMdDownload className="w-4 h-4" />
                               </button>
                          </div>
@@ -87,11 +138,19 @@ function ChatBubble() {
                                         <p className="text-sm font-medium">{message.content}</p>
                                         <p className="text-xs text-gray-400">{message.fileSize}</p>
                                    </div>
-                                   <button className="p-2 hover:bg-black/20 rounded-full opacity-0 group-hover:opacity-100 transition-all">
-                                   <PiDownloadSimpleBold className="w-4 h-4" />
+                                   <button className="p-2  hover:bg-black/20 rounded-full opacity-0 group-hover:opacity-100 transition-all">
+                                   <PiDownloadSimpleBold className="w-4 h-4 cursor-pointer" />
                                    </button>
                               </div>
                          );
+                         case 'video':
+                          return (
+                          <div className="relative group">
+                            <video className="rounded-lg max-w-sm shadow-lg" controls>
+                              <source src={message.content} type="video/mp4" />
+                            </video>
+                          </div>
+                          );
                          default:
                               return <p className="text-sm leading-relaxed">{message.text}</p>;
           }
@@ -151,6 +210,7 @@ function ChatBubble() {
                     className="w-8 h-8 rounded-full object-cover ml-2 self-end hover:scale-110 transition-transform cursor-pointer"
                   />
                 )}
+                
               </div>
            ))
       ) : (
