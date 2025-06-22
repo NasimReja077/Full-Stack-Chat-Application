@@ -19,7 +19,7 @@ function App() {
         <Route path="/signUp" element={<SignUpPage />} />
         <Route path="/forgotpassword" element={<ForgotPasswordPage />} />
         <Route path="/loader" element={<Loader />} />
-        <Route path="/error" element={<Error />} />
+        <Route path="*" element={<Error />} />
         <Route path="/otp" element={<OTPVerification />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/chats" element={<Chat />} />
